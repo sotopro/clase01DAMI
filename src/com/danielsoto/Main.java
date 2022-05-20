@@ -2,6 +2,7 @@ package com.danielsoto;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.Date;
 
 public class Main {
@@ -51,10 +52,81 @@ public class Main {
         System.out.println("Daniel is equal to Jose: " + (danielAge == joseAge));
         System.out.println("Daniel is not equal to Jose: " + (danielAge != joseAge));
 
+        boolean isStudent = true;
+        boolean isTeacher = false;
+
+        // logical operators
+        System.out.println("Daniel is a student AND: " + (isStudent && isTeacher));
+        System.out.println("Daniel is a student OR: " + (isStudent || isTeacher));
+        System.out.println("Daniel is a student NOT: " + (!isStudent));
+        System.out.println("Daniel is a student XOR: " + (isStudent ^ isTeacher));
 
         // String
         String name = new String("Daniel");
         System.out.println("localDateTime: " + localDateTime);
+
+        int adultAge = 21;
+        if(joseAge >= 18) {
+            System.out.println("You are an adult");
+        } else {
+            System.out.println("You are not an adult");
+        }
+
+        // ternary operator
+        String message = (danielAge >= adultAge) ? "You are an adult" : "You are not an adult";
+        System.out.println(message);
+
+        // switch statement
+        int day = localDate.getDayOfWeek().getValue();
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Invalid day");
+                break;
+        }
+
+        int [] numbers = {1, 2, 3, 4, 5};
+        System.out.println(Arrays.toString(numbers));
+        System.out.println(numbers[2]);
+        System.out.println(numbers.length);
+
+        // for loop
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+        for (int number : numbers) {
+            System.out.println(number);
+        }
+        String[] names = {"Daniel", "Jose", "Juan", "Maria", "Sara"};
+        for (String nameValue : names) {
+            if(nameValue.startsWith("D")) {
+                continue;
+            }
+            if(nameValue.startsWith("M")) {
+                break;
+            }
+            System.out.println(nameValue);
+        }
     }
 
     // create static class Person
