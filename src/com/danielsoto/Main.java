@@ -14,5 +14,12 @@ public class Main {
         bike.speedUp(10);
         bike.applyBrakes(5);
         bike.printStates();
+
+        int a = 10;
+
+        Square square = (int x) -> x * x;
+
+        int answer = square.calculate(a);
+        System.out.println(answer);
     }
 }
