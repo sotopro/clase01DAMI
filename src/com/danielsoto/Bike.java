@@ -1,13 +1,8 @@
 package com.danielsoto;
 
-public class Bicycle implements Vehicle {
-    public int gear;
-    public int speed;
-
-    public Bicycle(int gear, int speed) {
-        this.gear = gear;
-        this.speed = speed;
-    }
+public class Bike implements Vehicle {
+    int speed;
+    int gear;
 
     @Override
     public void changeGear(int newGear) {
@@ -23,7 +18,8 @@ public class Bicycle implements Vehicle {
     public void applyBrakes(int decrement) {
         speed -= decrement;
     }
+
     public void printStates() {
-        System.out.println("Bicycle - Speed: " + speed + " Gear: " + gear);
+        System.out.println("Bike - Speed: " + speed + " Gear: " + gear);
     }
 }

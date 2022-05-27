@@ -2,12 +2,17 @@ package com.danielsoto;
 
 public class Main {
     public static void main(String[] args) {
-        Addition addition = new Addition();
+        Bicycle bicycle = new Bicycle(1, 15);
+        bicycle.changeGear(2);
+        bicycle.speedUp(30);
+        bicycle.applyBrakes(12);
 
-        int sum1 = addition.add(1, 2);
-        System.out.println("1 + 2 = " + sum1);
+        bicycle.printStates();
 
-        int sum2 = addition.add(1, 2, 3);
-        System.out.println("1 + 2 + 3 = " + sum2);
+        Bike bike = new Bike();
+        bike.changeGear(1);
+        bike.speedUp(10);
+        bike.applyBrakes(5);
+        bike.printStates();
     }
 }
